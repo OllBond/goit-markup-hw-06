@@ -717,6 +717,11 @@ img {
   border: none;
   cursor: pointer;
 }
+.btn-form-footer:hover,
+.btn-form-footer:focus {
+  background-color: var(--button-order-hover);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 .icon-form-footer {
   width: 24px;
   height: 24px;
@@ -862,6 +867,11 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border: none;
+}
+.form-btn-modal:hover,
+.form-btn-modal:focus {
+  background-color: var(--button-order-hover);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .icons-modal {
