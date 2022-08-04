@@ -833,7 +833,7 @@ img {
   color: var(--primary-text-color);
 }
 .checkbox {
-  appearance: none;
+  /* appearance: none; */
   position: absolute;
 }
 .icon-checkbox {
