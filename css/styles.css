@@ -699,6 +699,7 @@ img {
   border-radius: 4px;
 }
 .btn-form-footer {
+  transition: background-color var(--timing-duration) var(--timing-function);
   margin-right: 10px;
   width: 200px;
   height: 50px;
@@ -782,10 +783,13 @@ img {
   transform: color var(--timing-duration) var(--timing-function);
   cursor: pointer;
 }
-.form-modal-field:focus-within .form-modal-input,
-.form-modal-field:focus-within .icons-modal {
+.form-modal-field:focus-within > .form-modal-input,
+.form-modal-field:focus-within > .icons-modal {
   color: var(--accent-text-color);
 }
+/* .form-modal-input:focus + .icons-modal {
+  color: var(--accent-text-color);
+} */
 
 .comments {
   font-weight: 400;
@@ -839,6 +843,7 @@ img {
 }
 
 .form-btn-modal {
+  transition: background-color var(--timing-duration) var(--timing-function);
   width: 200px;
   height: 50px;
 
