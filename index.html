@@ -69,12 +69,12 @@
                 </svg>
               </button>
               <!--Form modal window-->
+              <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
               <form class="form-modal">
-                <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
                 <label class="form-modal-field">
                   <span class="form-modal-deskrip">Имя</span>
                   <span class="form-modal-input-wrapper">
-                    <input class="form-modal-input" type="text" name="name" />
+                    <input class="form-modal-input" type="text" name="name" required />
                     <svg class="form-modal-input-icon">
                       <use href="./images/icons.svg#icon-person"></use>
                     </svg>
@@ -83,7 +83,7 @@
                 <label class="form-modal-field">
                   <span class="form-modal-deskrip">Телефон</span>
                   <span class="form-modal-input-wrapper">
-                    <input class="form-modal-input" type="tel" name="tel" />
+                    <input class="form-modal-input" type="tel" name="tel" required />
                     <svg class="form-modal-input-icon">
                       <use href="./images/icons.svg#icon-phone"></use>
                     </svg>
@@ -92,13 +92,13 @@
                 <label class="form-modal-field">
                   <span class="form-modal-deskrip">Почта</span>
                   <span class="form-modal-input-wrapper">
-                    <input class="form-modal-input" type="email" name="email" />
+                    <input class="form-modal-input" type="email" name="email" required />
                     <svg class="form-modal-input-icon">
                       <use href="./images/icons.svg#icon-email"></use>
                     </svg>
                   </span>
                 </label>
-                <label class="form-modal-field">
+                <label class="form-modal-texarea">
                   <span class="form-modal-deskrip">Комментарий</span>
                   <textarea
                     class="form-modal-massage"
@@ -111,6 +111,7 @@
                   id="user-policy"
                   type="checkbox"
                   name="policy"
+                  required
                 />
                 <label for="user-policy" class="form-field-checkbox">
                   <span class="icon-checkbox"></span>
@@ -437,7 +438,7 @@
     <!--Footer-->
     <footer class="address">
       <div class="container footer-container">
-        <div>
+        <div class="footer-contacts">
           <a href="./index.html" class="logo-footer-link"
             ><span class="logo-web-word-footer">Web</span
             ><span class="logo-studio-footer">Studio</span>
@@ -496,18 +497,18 @@
           </ul>
         </div>
         <!--Footer form-->
-        <form class="footer-form">
+        <div class="footer-form">
           <p class="footer-form-title">Подпишитесь на рассылку</p>
-          <div class="footer-form-wrap">
-            <input class="input-footer" type="text" placeholder="E-mail" />
+          <form class="footer-form-wrap">
+            <input class="input-footer" type="text" placeholder="E-mail" required />
             <button class="btn-form-footer" type="submit">
               Подписаться
               <svg class="icon-form-footer">
                 <use href="./images/icons.svg#icon-plane"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
         <!--/Footer form-->
       </div>
     </footer>
