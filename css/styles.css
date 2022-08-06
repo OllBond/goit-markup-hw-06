@@ -753,9 +753,11 @@ img {
 }
 
 .form-modal-field {
+  transition: border-color var(--timing-duration) var(--timing-function);
   margin-bottom: 10px;
 }
 .form-modal-texarea {
+  transition: border-color var(--timing-duration) var(--timing-function);
   margin-bottom: 20px;
 }
 .form-modal-deskrip {
@@ -777,7 +779,8 @@ img {
 }
 
 .form-modal-input {
-  transition: color var(--timing-duration) var(--timing-function);
+  transition: color var(--timing-duration) var(--timing-function),
+    border var(--timing-duration) var(--timing-function);
   margin: 0;
   padding-left: 42px;
 
@@ -786,18 +789,20 @@ img {
   color: var(--color-logo);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: border-color var(--timing-duration) var(--timing-function);
   cursor: pointer;
 }
 
-.form-modal-input:focus {
+/* .form-modal-input:focus {
+  outline: none;
+  border-color: var(--accent-text-color);
+} */
+.form-modal-field:focus-within .form-modal-input,
+.form-modal-field:hover .form-modal-input {
   outline: none;
   border-color: var(--accent-text-color);
 }
 
 .form-modal-massage {
-  transition: border-color var(--timing-duration) var(--timing-function);
-
   width: 100%;
   height: 120px;
 
@@ -815,16 +820,23 @@ img {
   border-radius: 4px;
 }
 
-.form-modal-massage:focus {
+.form-modal-texarea:focus-within .form-modal-massage,
+.form-modal-texarea:hover .form-modal-massage {
   outline: none;
   border-color: var(--accent-text-color);
 }
+/* .form-modal-massage:focus {
+  outline: none;
+  border-color: var(--accent-text-color);
+} */
 
 .form-modal-massage::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
 .form-modal-input-icon {
+  transition: fill var(--timing-duration) var(--timing-function);
+
   position: absolute;
   top: 50%;
   left: 12px;
@@ -834,9 +846,12 @@ img {
 
   width: 18px;
   height: 18px;
-  transition: fill var(--timing-duration) var(--timing-function);
 }
-.form-modal-input:focus + .form-modal-input-icon {
+/* .form-modal-input:focus + .form-modal-input-icon {
+  fill: var(--accent-text-color);
+} */
+.form-modal-field:focus-within .form-modal-input-icon,
+.form-modal-field:hover .form-modal-input-icon {
   fill: var(--accent-text-color);
 }
 
